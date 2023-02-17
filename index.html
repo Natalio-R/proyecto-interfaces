@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NiftyVerse</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/b7812e77e8.css" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="overflow-hidden">
+        <header class="header" id="header">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <img src="https://dopop.net/img/logos/new-logo-white.svg" alt="Logotipo" title="NiftyVerse">
+                        </a>
+                    </div>
+                    <div class="header__menu">
+                        <ul class="d-flex space-x-20">
+                            <li>
+                                <a href="./index.html" class="color_black active">Inicio</a>
+
+                            </li>
+                            <li>
+                                <a href="./index.html" class="color_black">Marketplace</a>
+                            </li>
+                            <li>
+                                <a href="./index.html" class="color_black">Creadores</a>
+                            </li>
+                            <li>
+                                <a href="./index.html" class="color_black">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-search-btns">
+                        <div class="header__search">
+                            <input type="text" placeholder="Buscar">
+                            <a href="#">
+                                <button class="header__result">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="header__btns">
+                            <div class="container dark-mode-div">
+                                <div class="text-center d-flex justify-content-between space-x-10 align-items-center">
+                                    <div class="mode_switcher space-x-10">
+                                        <div class="form-check form-switch ms-auto mt-3 me-3">
+                                            <label class="form-check-label ms-3" for="lightSwitch">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-brightness-high"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                                                </svg>
+                                            </label>
+                                            <input class="form-check-input" type="checkbox" id="lightSwitch" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="viewport" data-scroll-container="true">
+            <div class="hero__2 container">
+                <div class="back-img-div back-img-hero-div" style="z-index: 0;">
+                    <img class="back-img back-img-4" src="./assets/Group-132-blur.png">
+                </div>
+                <div class="back-img-div-left back-img-hero-div" style="z-index: 0;">
+                    <img class="back-img back-img-4" src="./assets/Group-132-blur.png">
+                </div>
+                <div class="container">
+                    <div class="space-y-20" style="padding-top: 55px;">
+                        <a href="./index.html">
+                            <h1 class="hero__title text-center">Crea, Compra & Vende NFTs</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/switch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

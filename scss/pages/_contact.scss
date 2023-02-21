@@ -1,0 +1,231 @@
+.contact {
+  background-image: url(../../assets/eclipse.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  margin-bottom: -100px;
+  background-position-y: 0;
+
+  .contact__content {
+    height: 115vh;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    color: $color_white !important;
+
+    input {
+      font-weight: 500;
+      padding-left: 6% !important;
+    }
+  }
+
+  .box.is__big {
+    padding: 0 !important;
+  }
+
+  h1 {
+    font-weight: 500;
+    color: $color_white;
+  }
+
+  .privacy-check-div {
+    align-items: center;
+    display: flex;
+    margin-top: 3%;
+
+    .checkmark {
+      border: 1px solid $color_white;
+      border-radius: 15px;
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    p {
+      color: $color_white !important;
+      font-size: 12px !important;
+      font-weight: 400 !important;
+      margin-left: 2%;
+
+      a {
+        font-weight: 600 !important;
+        text-decoration: underline !important;
+        color: $color_white;
+      }
+    }
+  }
+
+  .btn.btn-grad {
+    background: #39f !important;
+
+    &:hover {
+      background-color: $color_blue2 !important;
+    }
+  }
+}
+
+a.btn.btn-grad.box-shadow-none {
+  box-shadow: none !important;
+}
+
+.requests {
+  margin-bottom: -100px;
+  position: relative;
+
+  @include md {
+    margin-bottom: -70px;
+  }
+
+  .requests__wrap {
+    margin: 100px 0;
+
+    @include md {
+      margin: 70px 0;
+    }
+  }
+
+  .contact__img {
+    overflow: hidden;
+
+    @include lg {
+      display: none;
+    }
+
+    .img__wrap {
+      img {
+        height: 100%;
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
+  .requests_footer {
+    display: flex;
+    justify-content: space-between;
+
+    @include sm {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .Attach_desc {
+      display: flex;
+      align-items: center;
+
+      @include md {
+        margin-right: 20px;
+      }
+
+      @include sm {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      .Attach_file {
+        position: relative;
+        display: block ruby;
+
+        input[type="file"] {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          border-radius: 100px;
+          padding: 0;
+          margin: 0;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          cursor: pointer;
+          filter: alpha(opacity=0);
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+.register {
+  background: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: -100px;
+  text-align: center;
+
+  .right_part {
+    padding: 200px 0;
+  }
+
+  h1 {
+    font-weight: 500;
+    color: $color_white;
+  }
+
+  p.color_white {
+    font-size: 16px;
+    color: $color_white;
+
+    span a {
+      text-decoration: underline !important;
+      color: $color_white;
+    }
+  }
+
+  .box.edit_box.back-blur.back-glass-effect {
+    box-shadow: none !important;
+  }
+
+  a.btn {
+    font-weight: 600;
+  }
+
+  .btn.btn-grad {
+    background: $color_white !important;
+    color: #fa66aa;
+  }
+
+  .terms-check {
+    font-size: 10px;
+    font-weight: 400;
+    text-align: left !important;
+    color: $color_white;
+
+    span {
+      font-weight: 600 !important;
+      text-decoration: none;
+    }
+  }
+}
+
+.login {
+  height: 100vh;
+  margin-bottom: -100px;
+
+  .btn.btn-grad {
+    background: $color_white !important;
+    color: $color_blue2;
+  }
+}
+
+.register.login-back {
+  background-image: url(../../assets/register.png) !important;
+  background-position-y: -60px;
+}
+
+.register {
+  background-image: url(../../assets/login.png) !important;
+  background-position-y: -60px;
+}
+
+.register.login-back .btn.btn-grad {
+  color: $color_blue2;
+}
+
+.register-back p.color_white {
+  font-size: 16px;
+  color: $color_white;
+}

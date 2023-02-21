@@ -1,47 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
+    <!-- Metatags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NiftyVerse</title>
+    <title>NiftyVerse - NFT Marketplace</title>
+    <!-- Frameworks CSS - Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Locals CSS -->
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Iconos - Fontawesome -->
     <link rel="stylesheet" href="https://kit.fontawesome.com/b7812e77e8.css" crossorigin="anonymous">
+    <!-- Icons - Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 
 <body>
     <div class="overflow-hidden">
-        <header class="header" id="header">
+        <!-- Headers -->
+        <header class="header__1" id="header">
             <div class="container">
                 <div class="wrapper">
                     <div class="header__logo">
                         <a href="./index.html">
-                            <img src="https://dopop.net/img/logos/new-logo-white.svg" alt="Logotipo" title="NiftyVerse">
+                            <img src="./assets/logo_black.png" alt="Logotipo" title="NiftyVerse">
                         </a>
                     </div>
-                    <div class="header__menu">
+                    <div class="header__menu d-xl-flex d-sm-none">
                         <ul class="d-flex space-x-20">
                             <li>
                                 <a href="./index.html" class="color_black active">Inicio</a>
-
                             </li>
                             <li>
-                                <a href="./index.html" class="color_black">Marketplace</a>
+                                <a href="./pages/marketplace.html" class="color_black">Marketplace</a>
                             </li>
                             <li>
-                                <a href="./index.html" class="color_black">Creadores</a>
+                                <a href="./pages/creators.html" class="color_black">Creadores</a>
                             </li>
                             <li>
-                                <a href="./index.html" class="color_black">Contacto</a>
+                                <a href="./pages/contact.html" class="color_black">Contacto</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="header-search-btns">
-                        <div class="header__search">
+                    <div class="header-search-btns-div">
+                        <div class="header__search d-xl-flex d-sm-none">
                             <input type="text" placeholder="Buscar">
                             <a href="#">
                                 <button class="header__result">
@@ -53,18 +58,33 @@
                             <div class="container dark-mode-div">
                                 <div class="text-center d-flex justify-content-between space-x-10 align-items-center">
                                     <div class="mode_switcher space-x-10">
-                                        <div class="form-check form-switch ms-auto mt-3 me-3">
-                                            <label class="form-check-label ms-3" for="lightSwitch">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                                    fill="currentColor" class="bi bi-brightness-high"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-                                                </svg>
-                                            </label>
-                                            <input class="form-check-input" type="checkbox" id="lightSwitch" />
+                                        <div class="light d-flex align-items-center mode">
+                                            <i class="bi bi-moon-fill"></i>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu__btn d-sm-flex d-xl-none" id="swicthMenu">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="header__mobile js-header-mobile" id="menuMobile">
+                            <div class="header__mobile__menu space-y-80">
+                                <ul class="d-flex space-y-30 container" style="padding: 0px;">
+                                    <li><a class="color_black active" href="./index.html">Inicio</a></li>
+                                    <li><a class="color_black" href="./pages/marketplace.html">Marketplace</a></li>
+                                    <li><a class="color_black" href="./pages/creators.html">Creadores</a> </li>
+                                    <li><a class="color_black" href="./pages/contact.html">Contacto</a></li>
+                                    <li><a class="color_black" href="./pages/connect_wallet.html">Conectar Wallet</a>
+                                    </li>
+                                </ul>
+                                <div class="headers-btns-div ">
+                                    <a class="btn header-btn header-btn-signup"
+                                        href="./pages/signup.html">Registrarse</a>
+                                    <a class="btn header-btn header-btn-signin" href="./pages/signin.html">Iniciar
+                                        Sesión</a>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +93,8 @@
             </div>
         </header>
 
-        <div id="viewport" data-scroll-container="true">
+        <div id="viewport">
+            <!-- Hero -->
             <div class="hero__2 container">
                 <div class="back-img-div back-img-hero-div" style="z-index: 0;">
                     <img class="back-img back-img-4" src="./assets/Group-132-blur.png">
@@ -82,19 +103,1084 @@
                     <img class="back-img back-img-4" src="./assets/Group-132-blur.png">
                 </div>
                 <div class="container">
-                    <div class="space-y-20" style="padding-top: 55px;">
-                        <a href="./index.html">
-                            <h1 class="hero__title text-center">Crea, Compra & Vende NFTs</h1>
-                        </a>
+                    <div class="row">
+                        <div class="col-lg-3 pl-0 d-sm-none d-md-none d-lg-none d-xl-block">
+                            <div class="card__item one is__hero">
+                                <div class="card_body">
+                                    <div class="card_head">
+                                        <a href="./pages/nft_detail.html">
+                                            <img src="./assets/nft/hero_01.jpg" alt>
+                                        </a>
+                                        <div
+                                            class="details space-x-0 d-flex justify-content-between back-blur back-glass-effect back-dark d-xxl-flex d-sm-none">
+                                            <div class="fire-div">
+                                                <div>
+                                                    <img src="./assets/fire.png">
+                                                </div>
+                                            </div>
+                                            <div class="auction_end">
+                                                <p class="color_text txt font-15">Oferta acaba</p>
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center space-x-10 txt_lg _bold">
+                                                    <div class="d-flex countdown_item align-items-center font-18">
+                                                        <div class="item">
+                                                            <div class="number hours">
+                                                                <p>05</p>
+                                                                <span></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dots">
+                                                            <p>:</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <div class="number minutes">
+                                                                <p>23</p>
+                                                                <span></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dots">
+                                                            <p>:</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <div class="number seconds">
+                                                                <p>46</p>
+                                                                <span></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="eth-div">
+                                                <div>
+                                                    <img src="./assets/eth.png">
+                                                </div>
+                                            </div>
+                                            <div class="bid space-x-10">
+                                                <div class="my-flex-column">
+                                                    <p class="color_text
+                                                    txt font-15">Puja actual</p><span class="txt_lg
+                                                    _bold font-18">2 ETH</span>
+                                                </div>
+                                            </div>
+                                            <div class="btn-bid-div"><a
+                                                    class="btn-bid back-blur back-glass-effect back-dark"
+                                                    href="./pages/nft_detail.html">pujar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-20 col-lg-12 col-xl-6" style="padding: 50px 0;">
+                            <a href="./pages/marketplace.html">
+                                <h1 class="hero__title text-center">Compra y Vende NFTs</h1>
+                            </a>
+                            <p class="hero__text text-center sub-text">
+                                Descubre lo más nuevo del arte digital
+                            </p>
+                            <div class="mt-50 space-x-20 d-flex justify-content-center hero-btn-div">
+                                <div class="my-btns-div"><a class="btn btn-grad btn-md btn-hover"
+                                        href="./pages/marketplace.html"></a>
+                                    <p class="my-btns-text">Ver la tienda</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 pr-0 d-sm-none d-xl-block">
+                            <div class="card__item one is__hero">
+                                <div class="card_body">
+                                    <div class="card_head">
+                                        <a href="./pages/nft_detail.html">
+                                            <img src="./assets/nft/hero_02.jpg" alt>
+                                        </a>
+                                        <div
+                                            class="details space-x-0 d-flex justify-content-between back-blur back-glass-effect back-dark d-xxl-flex d-sm-none">
+                                            <div class="fire-div">
+                                                <div>
+                                                    <img src="./assets/fire.png">
+                                                </div>
+                                            </div>
+                                            <div class="auction_end">
+                                                <p class="color_text txt font-15">Oferta acaba</p>
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center space-x-10 txt_lg _bold">
+                                                    <div class="d-flex countdown_item align-items-center font-18">
+                                                        <div class="item">
+                                                            <div class="number hours">
+                                                                <p>15</p><span></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dots">
+                                                            <p>:</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <div class="number minutes">
+                                                                <p>54</p><span></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dots">
+                                                            <p>:</p>
+                                                        </div>
+                                                        <div class="item">
+                                                            <div class="number seconds">
+                                                                <p>18</p><span></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="eth-div">
+                                                <div><img src="./assets/eth.png"></div>
+                                            </div>
+                                            <div class="bid space-x-10">
+                                                <div class="my-flex-column">
+                                                    <p class="color_text txt font-15">Puja actual</p>
+                                                    <span class="txt_lg _bold font-18">2.2 ETH</span>
+                                                </div>
+                                            </div>
+                                            <div class="btn-bid-div">
+                                                <a class="btn-bid back-blur back-glass-effect back-dark"
+                                                    href="./pages/nft_detail.html">pujar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3 pl-0">
+                                <div class="card__item one is__hero">
+                                    <div class="card_body">
+                                        <div class="card_head">
+                                            <a href="./pages/nft_detail.html">
+                                                <img src="./assets/nft/hero_03.webp" alt>
+                                            </a>
+                                            <div
+                                                class="details space-x-0 d-flex justify-content-between back-blur back-glass-effect back-dark d-sm-flex d-lg-none d-xxl-flex">
+                                                <div class="fire-div">
+                                                    <div>
+                                                        <img src="./assets/fire.png">
+                                                    </div>
+                                                </div>
+                                                <div class="auction_end">
+                                                    <p class="color_text txt font-15">Oferta acaba</p>
+                                                    <div
+                                                        class="d-flex justify-content-center align-items-center space-x-10 txt_lg _bold">
+                                                        <div class="d-flex countdown_item align-items-center font-18">
+                                                            <div class="item">
+                                                                <div class="number hours">
+                                                                    <p>03</p><span></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dots">
+                                                                <p>:</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="number minutes">
+                                                                    <p>39</p><span></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dots">
+                                                                <p>:</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="number seconds">
+                                                                    <p>49</p><span></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="eth-div">
+                                                    <div>
+                                                        <img src="./assets/eth.png">
+                                                    </div>
+                                                </div>
+                                                <div class="bid space-x-10">
+                                                    <div class="my-flex-column">
+                                                        <p class="color_text txt font-15">Puja actual</p>
+                                                        <span class="txt_lg _bold font-18">5 ETH</span>
+                                                    </div>
+                                                </div>
+                                                <div class="btn-bid-div">
+                                                    <a class="btn-bid back-blur back-glass-effect back-dark"
+                                                        href="./pages/nft_detail.html">pujar</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 pl-0" id="img-position">
+                                <div class="card__item one is__hero">
+                                    <div class="card_body">
+                                        <div class="card_head">
+                                            <a href="./pages/nft_detail.html">
+                                                <img src="./assets/nft/hero_04.webp" alt>
+                                            </a>
+                                            <div
+                                                class="details space-x-0 d-flex justify-content-between back-blur back-glass-effect back-dark d-sm-flex d-lg-none d-xxl-flex">
+                                                <div class="fire-div">
+                                                    <div><img src="./assets/fire.png"></div>
+                                                </div>
+                                                <div class="auction_end">
+                                                    <p class="color_text txt font-15">Oferta acaba</p>
+                                                    <div
+                                                        class="d-flex justify-content-center align-items-center space-x-10 txt_lg _bold">
+                                                        <div class="d-flex countdown_item align-items-center font-18">
+                                                            <div class="item">
+                                                                <div class="number hours">
+                                                                    <p>16</p><span></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dots">
+                                                                <p>:</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="number minutes">
+                                                                    <p>39</p><span></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dots">
+                                                                <p>:</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="number seconds">
+                                                                    <p>49</p><span></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="eth-div">
+                                                    <div>
+                                                        <img src="./assets/eth.png">
+                                                    </div>
+                                                </div>
+                                                <div class="bid space-x-10">
+                                                    <div class="my-flex-column">
+                                                        <p class="color_text txt font-15">Puja actual</p>
+                                                        <span class="txt_lg _bold font-18">2 ETH</span>
+                                                    </div>
+                                                </div>
+                                                <div class="btn-bid-div">
+                                                    <a class="btn-bid back-blur back-glass-effect back-dark"
+                                                        href="./pages/nft_detail.html">pujar</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 pr-0">
+                                <div class="card__item one is__hero">
+                                    <div class="card_body">
+                                        <div class="card_head"><a href="./pages/nft_detail.html"><img
+                                                    src="./assets/nft/hero_06.jpg" alt></a>
+                                            <div
+                                                class="details space-x-0 d-flex justify-content-between back-blur back-glass-effect back-dark d-sm-flex d-lg-none d-xxl-flex">
+                                                <div class="fire-div">
+                                                    <div><img src="./assets/fire.png"></div>
+                                                </div>
+                                                <div class="auction_end">
+                                                    <p class="color_text
+                        txt font-15">Oferta acaba</p>
+                                                    <div class="d-flex
+                        justify-content-center
+                        align-items-center
+                        space-x-10
+                        txt_lg
+                        _bold">
+                                                        <div class="d-flex countdown_item
+                        align-items-center font-18">
+                                                            <div class="item">
+                                                                <div class="number hours">
+                                                                    <p>00</p><span></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dots">
+                                                                <p>:</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="number minutes">
+                                                                    <p>39</p><span></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dots">
+                                                                <p>:</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="number seconds">
+                                                                    <p>49</p><span></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="eth-div">
+                                                    <div><img src="./assets/eth.png">
+                                                    </div>
+                                                </div>
+                                                <div class="bid space-x-10">
+                                                    <div class="my-flex-column">
+                                                        <p class="color_text
+                        txt font-15">Puja actual</p><span class="txt_lg
+                        _bold font-18">5 ETH</span>
+                                                    </div>
+                                                </div>
+                                                <div class="btn-bid-div"><a
+                                                        class="btn-bid back-blur back-glass-effect back-dark"
+                                                        href="./pages/nft_detail.html">pujar</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 pr-0">
+                                <div class="card__item one is__hero">
+                                    <div class="card_body">
+                                        <div class="card_head"><a href="./pages/nft_detail.html"><img
+                                                    src="./assets/nft/hero_06.jpg" alt></a>
+                                            <div
+                                                class="details space-x-0 d-flex justify-content-between back-blur back-glass-effect back-dark d-sm-flex d-lg-none d-xxl-flex">
+                                                <div class="fire-div">
+                                                    <div><img src="./assets/fire.png"></div>
+                                                </div>
+                                                <div class="auction_end">
+                                                    <p class="color_text
+                        txt font-15">Oferta acaba</p>
+                                                    <div class="d-flex
+                        justify-content-center
+                        align-items-center
+                        space-x-10
+                        txt_lg
+                        _bold">
+                                                        <div class="d-flex countdown_item
+                        align-items-center font-18">
+                                                            <div class="item">
+                                                                <div class="number hours">
+                                                                    <p>08</p><span></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dots">
+                                                                <p>:</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="number minutes">
+                                                                    <p>39</p><span></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dots">
+                                                                <p>:</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="number seconds">
+                                                                    <p>49</p><span></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="eth-div">
+                                                    <div><img src="./assets/eth.png">
+                                                    </div>
+                                                </div>
+                                                <div class="bid space-x-10">
+                                                    <div class="my-flex-column">
+                                                        <p class="color_text
+                        txt font-15">Puja actual</p><span class="txt_lg
+                        _bold font-18">8 ETH</span>
+                                                    </div>
+                                                </div>
+                                                <div class="btn-bid-div"><a
+                                                        class="btn-bid back-blur back-glass-effect back-dark"
+                                                        href="./pages/nft_detail.html">pujar</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="section todaysPick-margin-top"></div>
+
+            <!-- TodaysPick -->
+            <div id="todaysPick" class="container todaysPick">
+                <div class="row md:space-y-30">
+                    <div class="col-lg-12">
+                        <div class="section__head">
+                            <h2 class="section__title mb-20 section-title-recent">Explorar
+                                <span class="explore-span">recientes<img class="arrow-down"
+                                        src="./assets/arrow-down.svg">
+                                </span>
+                            </h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./pages/nft_detail.html">
+                                                <img src="./assets/nft/nft_01.webp" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="#">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">24</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="#" data-toggle="modal" data-target="#popup_bid"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span>
+                                                        <i class="bi bi-bag-fill"></i>Comprar
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre del NFT #0001"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./pages/creator_detail.html">
+                                                        <img src="./assets/avatars/av_01.jpg" alt="Imagen creador">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="#">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.89 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item  my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./pages/nft_detail.html">
+                                                <img src="./assets/nft/nft_02.gif" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="./pages/signin.html">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">45</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./pages/nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span><i class="bi bi-bag-fill"></i>Comprar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0002"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./pages/creator_detail.html">
+                                                        <img src="./assets/avatars/av_02.jpg" alt="Imagen Avatar">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./pages/creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.92 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item  my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./pages/nft_detail.html">
+                                                <img src="./assets/nft/nft_02.gif" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="./pages/signin.html">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">45</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./pages/nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span><i class="bi bi-bag-fill"></i>Comprar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0002"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./pages/creator_detail.html">
+                                                        <img src="./assets/avatars/av_02.jpg" alt="Imagen Avatar">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./pages/creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.92 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item  my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./pages/nft_detail.html">
+                                                <img src="./assets/nft/nft_02.gif" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="./pages/signin.html">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">45</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./pages/nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span><i class="bi bi-bag-fill"></i>Comprar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0002"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./pages/creator_detail.html">
+                                                        <img src="./assets/avatars/av_02.jpg" alt="Imagen Avatar">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./pages/creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.92 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item  my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./pages/nft_detail.html">
+                                                <img src="./assets/nft/nft_02.gif" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="./pages/signin.html">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">45</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./pages/nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span><i class="bi bi-bag-fill"></i>Comprar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0002"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./pages/creator_detail.html">
+                                                        <img src="./assets/avatars/av_02.jpg" alt="Imagen Avatar">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./pages/creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.92 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item  my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./pages/nft_detail.html">
+                                                <img src="./assets/nft/nft_02.gif" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="./pages/signin.html">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">45</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./pages/nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span><i class="bi bi-bag-fill"></i>Comprar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0002"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./pages/creator_detail.html">
+                                                        <img src="./assets/avatars/av_02.jpg" alt="Imagen Avatar">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./pages/creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.92 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item  my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./pages/nft_detail.html">
+                                                <img src="./assets/nft/nft_02.gif" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="./pages/signin.html">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">45</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./pages/nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span><i class="bi bi-bag-fill"></i>Comprar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0002"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./pages/creator_detail.html">
+                                                        <img src="./assets/avatars/av_02.jpg" alt="Imagen Avatar">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./pages/creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.92 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item  my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./pages/nft_detail.html">
+                                                <img src="./assets/nft/nft_02.gif" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="./pages/signin.html">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">45</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./pages/nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span><i class="bi bi-bag-fill"></i>Comprar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0002"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./pages/creator_detail.html">
+                                                        <img src="./assets/avatars/av_02.jpg" alt="Imagen Avatar">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./pages/creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.92 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item  my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./pages/nft_detail.html">
+                                                <img src="./assets/nft/nft_02.gif" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="./pages/signin.html">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">45</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./pages/nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span><i class="bi bi-bag-fill"></i>Comprar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0002"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./pages/creator_detail.html">
+                                                        <img src="./assets/avatars/av_02.jpg" alt="Imagen Avatar">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./pages/creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.92 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item  my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./pages/nft_detail.html">
+                                                <img src="./assets/nft/nft_02.gif" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="./pages/signin.html">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">45</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./pages/nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span><i class="bi bi-bag-fill"></i>Comprar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0002"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./pages/creator_detail.html">
+                                                        <img src="./assets/avatars/av_02.jpg" alt="Imagen Avatar">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./pages/creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.92 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item  my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./pages/nft_detail.html">
+                                                <img src="./assets/nft/nft_02.gif" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="./pages/signin.html">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">45</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./pages/nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span><i class="bi bi-bag-fill"></i>Comprar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0002"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./pages/creator_detail.html">
+                                                        <img src="./assets/avatars/av_02.jpg" alt="Imagen Avatar">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./pages/creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.92 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item  my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./pages/nft_detail.html">
+                                                <img src="./assets/nft/nft_02.gif" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="./pages/signin.html">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">45</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./pages/nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span><i class="bi bi-bag-fill"></i>Comprar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0002"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./pages/creator_detail.html">
+                                                        <img src="./assets/avatars/av_02.jpg" alt="Imagen Avatar">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./pages/creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.92 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mt-4">
+                                <a class="btn btn-sm btn-white view-all-btn" href="./pages/marketplace.html">Ver todos
+                                    los items</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wallet -->
+            <div class="container market-data-page" style="position: relative;">
+                <div class="back-img-div-left" style="top: -100%;">
+                    <img class="back-img" src="./assets/Group-132-blur.png">
+                </div>
+                <div class="back-img-div" style="top: -100%;">
+                    <img class="back-img" src="./assets/Group-132-blur.png">
+                </div>
+                <div class="logos__wrap pull-mt market-div"
+                    style="background-color: transparent; border: none; box-shadow: none;">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-8 market-data-div">
+                            <h3 class="section__title market-data-text md:mb-20">Obten datos de nuestra API
+                                de activos digitales</h3>
+                        </div>
+                        <div class="connect-wallet-btn-div">
+                            <div class="my-btns-div"><a class="btn btn-grad btn-hover"
+                                    href="./pages/connect_wallet.html"></a>
+                                <p class="my-btns-text">Conectar wallet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer__1 ">
+                <div class="container">
+                    <div class="container">
+                        <div class="row container m-p-r-l-0-mobile">
+                            <div class="col-sm-12 col-lg-4 space-y-20">
+                                <div class="footer__logo d-sm-none d-md-block">
+                                    <a href="./index.html">
+                                        <img src="./assets/logo_black.png" class="footer-logo" alt="Logotipo Nifty"
+                                            id="logo_js_f">
+                                    </a>
+                                </div>
+                                <div class="send-email-div">
+                                    <input type="text" id="footer-send-email-input" placeholder="Tu correo"
+                                        style="border: none;">
+                                    <a href="#">Enviar</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-6 tablet-padding-left-zero">
+                                <h6 class="footer__title">Menu</h6>
+                                <ul class="footer__list">
+                                    <li><a href="./pages/marketplace.html">Tienda</a></li>
+                                    <li><a href="./pages/creators.html">Creadores</a></li>
+                                    <li><a href="./index.html">Inicio</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-6">
+                                <h6 class="footer__title">Creadores</h6>
+                                <ul class="footer__list">
+                                    <li><a href="./pages/signin.html">Iniciar Sesión</a></li>
+                                    <li><a href="./pages/signup.html">Registrarse</a></li>
+                                    <li><a href="./pages/connect_wallet.html">Conectar Wallet</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 d-xl-block d-lg-none col-6">
+                                <h6 class="footer__title">Páginas</h6>
+                                <ul class="footer__list">
+                                    <li><a href="./pages/contact.html">Contacto</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-2 col-lg-4 tablet-padding-left-zero padding-right-zero-social">
+                                <div>
+                                    <ul class="footer__social space-x-10">
+                                        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                        <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                                        <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                                        <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                                <hr>
+                                <div>
+                                    <div href="https://natalio.netlify.app" id="copyright-web" target="_blank"
+                                        class="copyright" style="margin-top: 105px;">Diseño &amp; Desarrollo <a
+                                            href="https://natalio.netlify.app" target="_blank"><img
+                                                src="https://natalio.netlify.app/favicon.ico" class="copyright-logo"
+                                                id="copyright-logo-f"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
+    </div>
 
     </div>
 
-    <script src="./js/main.js"></script>
+    <!-- Local JS -->
     <script src="./js/switch.js"></script>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>

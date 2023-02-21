@@ -1,194 +1,276 @@
-@import "base.scss";
-@import "is_dark.scss";
-
-.hero__2 {
-  padding-top: 91px;
-  position: relative;
-
-  &:before {
-    background: transparent;
-    background-repeat: no-repeat;
-    background-size: contain;
-    box-shadow: 0 17px 13px 0 #192c4b05;
-    content: "";
-    height: 80%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-  }
-
-  .back-img-div {
-    height: 45rem;
-    left: -33%;
-    position: absolute;
-    top: 30%;
-    -webkit-transform: rotate(80deg);
-    transform: rotate(80deg);
-    width: 45rem;
-    z-index: -1;
-  }
-
-  .back-img-div-left {
-    height: 45rem;
-    left: 108%;
-    position: absolute;
-    top: 45%;
-    -webkit-transform: rotate(25deg);
-    transform: rotate(25deg);
-    width: 45rem;
-    z-index: -1;
-  }
-
-  .back-img-hero-div {
-    height: 22rem;
-    top: 25%;
-    width: 22rem;
-  }
-
-  .back-img-div-left,
-  .back-img-div {
-    .back-img {
-      height: 100%;
-      object-fit: cover;
-      -webkit-transform: scale(2);
-      transform: scale(2);
-      width: 100%;
-    }
-  }
-}
+@import "./hooks";
 
 #viewport {
   left: 0;
   overflow: hidden !important;
   position: relative;
   top: 0;
+}
+
+.has-scroll-smooth [data-scroll-container] {
   min-height: 100vh;
+  -webkit-transform: perspective(1px) !important;
+  transform: perspective(1px) !important;
 }
 
-header {
-  position: fixed;
-  white-space: nowrap;
+.back-blur.back-glass-effect {
+  -webkit-backdrop-filter: blur(20px) !important;
+  backdrop-filter: blur(20px) !important;
+  background-color: hsla(0, 0%, 100%, 0.3) !important;
+  border: none;
+}
+
+.back-blur.back-glass-effect.back-dark {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.hero-creators-div .back-img-div-left,
+.market-data-page .back-img-div-left {
+  height: 35rem;
+  left: 90%;
+  top: 50% !important;
+  -webkit-transform: translateY(-50%) rotate(70deg);
+  transform: translateY(-50%) rotate(70deg);
+  width: 35rem;
+}
+
+.hero-creators-div .back-img-div,
+.market-data-page .back-img-div {
+  height: 35rem;
+  left: -28%;
+  top: 50% !important;
+  -webkit-transform: translateY(-50%) rotate(60deg);
+  transform: translateY(-50%) rotate(60deg);
+  width: 35rem;
+}
+
+.back-img-div {
+  height: 45rem;
+  left: -33%;
+  position: absolute;
+  top: 30%;
+  -webkit-transform: rotate(80deg);
+  transform: rotate(80deg);
+  width: 45rem;
+  z-index: -1;
+}
+
+.back-img-div-left {
+  height: 45rem;
+  left: 108%;
+  position: absolute;
+  top: 45%;
+  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
+  width: 45rem;
+  z-index: -1;
+}
+
+.back-img-div-left .back-img,
+.back-img-div .back-img {
+  height: 100%;
+  object-fit: cover;
+  -webkit-transform: scale(2);
+  transform: scale(2);
   width: 100%;
-  z-index: 2;
-  // .is-ight
-  -webkit-backdrop-filter: blur(25px) !important;
-  backdrop-filter: blur(25px) !important;
-  background: #f5f6f79f !important;
-  border-bottom: none;
+}
 
-  .wrapper {
-    align-items: center;
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
-    padding: 13px 0;
+.eth-div,
+.fire-div {
+  height: auto;
+  overflow: hidden;
+}
+
+.fire-div {
+  width: 20px;
+}
+
+.countdown_item .dots p,
+.countdown_item .item p {
+  color: #fff;
+  font-weight: 600;
+}
+
+.countdown_item .dots p {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.eth-div {
+  width: 15px;
+
+  div {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
   }
 
-  .header__logo {
-    a {
-      display: block;
-
-      img {
-        width: auto;
-        height: 1rem;
-      }
-    }
-  }
-
-  .header__menu {
-    margin-right: 32%;
-
-    ul {
-      list-style: none;
-
-      li {
-        cursor: pointer;
-        margin-left: 20px;
-
-        &:first-child {
-          margin-left: 0;
-        }
-
-        a {
-          color: #6f7073;
-          font-size: 15px;
-          font-weight: 500;
-          white-space: nowrap;
-
-          &:hover {
-            color: #fff;
-          }
-
-          &.active {
-            color: #1a1a1a;
-          }
-        }
-      }
-    }
-  }
-
-  .header-search-btns {
-    display: flex;
-
-    .header__search {
-      border-radius: 50px;
-      height: 2rem;
-      margin-top: 2px;
-      position: relative;
-      transition: all 0.2s ease-in-out;
-      width: 15rem;
-      background-color: #262626;
-
-      input {
-        background: transparent;
-        border: none;
-        border-radius: 50px;
-        font-weight: 500;
-        height: 100%;
-        width: 100%;
-        font-size: 12px;
-        padding: 12px 15px 12px 2rem;
-        position: relative;
-        line-height: 1.5;
-      }
-
-      a {
-        .header__result {
-          background: transparent;
-          border: none;
-          border-radius: 200px;
-          height: 2rem;
-          left: 2px;
-          position: absolute;
-          top: 50%;
-          -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-          width: 2rem;
-
-          i {
-            position: relative;
-            top: 1px;
-            color: #87898c;
-          }
-        }
-      }
-    }
-
-    .header__btns {
-      align-items: center;
-      display: flex;
-    }
+  img {
+    height: 100%;
+    object-fit: cover !important;
+    width: 100%;
   }
 }
 
-.hero__2 {
-  .hero__title {
-    font-size: 45px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: capitalize;
-    color: #fff;
+.eth-div,
+.fire-div {
+  height: auto;
+  overflow: hidden;
+}
+
+.back-blur.back-glass-effect {
+  -webkit-backdrop-filter: blur(20px) !important;
+  backdrop-filter: blur(20px) !important;
+  background-color: hsla(0, 0%, 100%, 0.3) !important;
+  border: none;
+}
+
+.back-blur.back-glass-effect.back-glass-darker {
+  border: none;
+  color: #fff;
+}
+
+.back-blur.back-glass-effect.back-glass-darker {
+  -webkit-backdrop-filter: blur(20px) !important;
+  backdrop-filter: blur(20px) !important;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.back-blur.back-glass-effect.back-dark {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.bg-color-dark.bg-cart-dark-color.not-blur-bg {
+  background-color: #fff !important;
+}
+
+.contact .back-blur.back-glass-effect,
+.register .back-blur.back-glass-effect {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  background-color: transparent !important;
+  box-shadow: 0 0 20px 0 #192c4b1c;
+  box-shadow: 0 17px 13px 0 #192c4b0a !important;
+}
+
+.sub-text {
+  color: #87898c !important;
+}
+
+.my-btns-div {
+  position: relative;
+}
+
+.btn.btn-hover {
+  -webkit-transform-origin: 50px px;
+  transform-origin: 50px;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.my-btns-div .btn-hover,
+.my-btns-div .btn.btn-hover-tablet {
+  padding: 30px 90px;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
+.my-btns-div .my-btns-text {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  left: 50%;
+  margin-left: 0 !important;
+  pointer-events: none;
+  position: absolute;
+  text-align: center !important;
+  top: 50%;
+  -webkit-transform: translate(-48%, -50%);
+  transform: translate(-48%, -50%);
+  width: -webkit-max-content;
+  width: max-content;
+}
+
+.btn.btn-hover:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+#img-position {
+  padding-right: 0 !important;
+}
+
+.send-email-div {
+  background-color: #f5f6f7;
+  border-radius: 50px;
+  bottom: 0;
+  margin-top: 100px !important;
+  position: relative;
+  width: 70%;
+}
+
+.likes {
+  align-items: center;
+  background: hsla(0, 0%, 100%, 0.966);
+  border-radius: 20px;
+  box-shadow: 0 17px 13px 0 #192c4b05;
+  display: flex;
+  padding: 3px 12px;
+  position: absolute;
+  right: 14px;
+  text-decoration: none;
+  top: 14px;
+  z-index: 1;
+
+  i {
+    color: $color_white !important;
+    font-weight: 400;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
+}
+
+.market-data-page {
+  height: 100vh;
+}
+
+.items-center {
+  justify-content: center;
+}
+
+.contact__content input,
+.contact__content textarea,
+.register input {
+  color: $color_white !important;
+}
+
+.contact input,
+.register input {
+  font-weight: 500 !important;
+  padding: 16px 15px !important;
+}
+
+.contact .custom-select,
+.contact input,
+.login input,
+.register input {
+  border-radius: 50px !important;
+}
+
+.btn-full-width {
+  width: 100%;
+}
+
+.item_details .right-side-div .nft-info-left .dots p,
+.item_details .right-side-div .nft-info-left .number p {
+  font-family: poppins;
+  font-size: 19px !important;
+  font-weight: 600 !important;
+}
+
+.item_details .right-side-div .nft-info-left .number p,
+.item_details .right-side-div .nft-info-left .numbers h4,
+.item_details .right-side-div .nft-info-left .numbers h4 span {
+  color: #1a1a1a !important;
 }

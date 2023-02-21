@@ -1,0 +1,379 @@
+.hero__2 {
+  padding-top: 91px;
+  position: relative;
+
+  &::before {
+    background: transparent;
+    box-shadow: 0 17px 13px 0 #192c4b05;
+    content: "";
+    height: 80%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .back-img-div {
+    height: 45rem;
+    left: -33%;
+    position: absolute;
+    top: 30%;
+    -webkit-transform: rotate(80deg);
+    transform: rotate(80deg);
+    width: 45rem;
+    z-index: -1;
+
+    .back-img {
+      height: 100%;
+      object-fit: cover;
+      -webkit-transform: scale(2);
+      transform: scale(2);
+      width: 100%;
+    }
+  }
+
+  .back-img-div-left {
+    height: 45rem;
+    left: 108%;
+    position: absolute;
+    top: 45%;
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+    width: 45rem;
+    z-index: -1;
+
+    .back-img {
+      height: 100%;
+      object-fit: cover;
+      -webkit-transform: scale(2);
+      transform: scale(2);
+      width: 100%;
+    }
+  }
+
+  .back-img-hero-div {
+    height: 22rem;
+    top: 25%;
+    width: 22rem;
+  }
+
+  .color_text {
+    color: $color_white;
+  }
+
+  .details {
+    .btn-bid-div {
+      display: flex;
+    }
+
+    .btn-bid {
+      -webkit-backdrop-filter: blur(45px);
+      backdrop-filter: blur(45px);
+      background-color: #000;
+      border-radius: 200px;
+      color: $color_white;
+      font-size: 11px;
+      padding: 15px 25px;
+    }
+
+    .font-15 {
+      font-size: 8px;
+    }
+
+    .font-18 {
+      font-size: 13px;
+    }
+
+    .my-flex-column {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .is__hero .countdown_item .dots p,
+  .is__hero .countdown_item .item p {
+    color: $color_white;
+  }
+
+  span {
+    color: $color_white;
+    font-weight: 600;
+  }
+
+  .hero__title {
+    font-size: 45px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+    color: #333 !important;
+  }
+
+  .hero__text {
+    max-width: 30rem;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+    max-width: 45rem;
+    padding-top: 6px;
+  }
+
+  .container .space-y-20 .hero-btn-div {
+    margin-top: 36px;
+  }
+
+  .wrapper {
+    background: $color_white;
+    background-color: transparent;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 17px 13px 0 #192c4b05;
+    margin-top: 22px;
+    padding: 0;
+    position: relative;
+  }
+
+  .d-sm-none {
+    @media only screen and (max-width: 575px) {
+      display: none;
+    }
+  }
+}
+
+.hero__collections {
+  background: $color_white;
+  border-bottom: 1px solid #e2eef1;
+  padding: 100px 0;
+}
+
+.my-display-flex-explore-filters {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  padding-bottom: 0 !important;
+  padding-top: 80px !important;
+}
+
+.hero__wallets {
+  padding-bottom: 42px !important;
+  padding-top: 125px !important;
+
+  h2 {
+    font-size: 51px;
+    font-weight: 500;
+    color: #000;
+  }
+
+  p.text-center {
+    font-size: 16px !important;
+    color: #87898c !important;
+    font-weight: 500;
+  }
+}
+
+.wallets {
+  .col-lg-4 {
+    position: relative;
+    cursor: pointer;
+
+    &:hover .box.in__wallet {
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
+    }
+
+    h5 {
+      font-size: 17px !important;
+      text-transform: capitalize;
+      font-weight: 500;
+      color: #000;
+    }
+
+    p {
+      color: #87898c !important;
+    }
+  }
+
+  .box.in__wallet {
+    height: 211px !important;
+  }
+
+  .wallet-content-div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    left: 0;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .logo img {
+    height: 51px;
+  }
+}
+
+.hero__creators {
+  padding-bottom: 66px !important;
+  padding-top: 173px !important;
+  padding: 190px 0 50px;
+
+  .hero {
+    flex-wrap: nowrap;
+  }
+
+  .hero-creators-div {
+    position: relative;
+  }
+}
+
+.creators-hero-padding,
+.mobile-hero-other-nfts {
+  cursor: grab;
+  transition: all 0.2s;
+}
+
+.creators-hero-padding {
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.creator_card {
+  background: #fff;
+  border: 1px solid #e2eef1;
+  border-radius: 20px;
+  box-shadow: 0 17px 13px 0 #192c4b05;
+  max-width: 30rem;
+}
+
+.creator_item {
+  border-radius: 35px;
+  max-width: 30rem;
+  padding: 10px;
+
+  .cover {
+    background: #183b56;
+    border-radius: 30px;
+    height: 100px;
+    margin-bottom: -50px;
+    overflow: hidden;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .share {
+    left: 10%;
+    position: absolute;
+    top: 37%;
+
+    .icon i {
+      color: #183b56;
+      font-size: 16px;
+    }
+  }
+
+  .more {
+    position: absolute;
+    right: 10%;
+    top: 37%;
+
+    .icon i {
+      color: #183b56;
+      font-size: 16px;
+    }
+  }
+
+  .has_border {
+    border-color: #fff !important;
+  }
+
+  .creator-name-div {
+    h1 {
+      font-size: 20px !important;
+      font-weight: 600;
+      text-align: center !important;
+      color: #000;
+    }
+
+    p {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+}
+
+.creator_card.is_big {
+  padding: 30px 20px !important;
+}
+
+.hero-creators-div {
+  position: relative;
+
+  .avatars_name.color_black {
+    font-size: 18px !important;
+    font-weight: 500;
+    color: #000;
+  }
+}
+
+.sales {
+  color: #87898c;
+  font-weight: 600;
+
+  span {
+    color: #39f;
+  }
+}
+
+.hero-creators-div .back-img-div-left,
+.market-data-page .back-img-div-left {
+  height: 35rem;
+  left: 90%;
+  top: 50% !important;
+  -webkit-transform: translateY(-50%) rotate(70deg);
+  transform: translateY(-50%) rotate(70deg);
+  width: 35rem;
+}
+
+.section__creators {
+  position: relative;
+
+  .section__title {
+    font-weight: 500;
+    color: #000;
+    font-size: 47px;
+  }
+}
+
+.discover-span {
+  color: #39f !important;
+  cursor: pointer;
+  text-transform: capitalize;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  img {
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 15px;
+  }
+}
+
+.creator_item.creator_card .avatars a {
+  width: 100%;
+}
+
+.section__creators .creator_item .more .icon,
+.section__creators .creator_item .share .icon {
+  background: $color_white !important;
+  height: 2.2rem;
+  width: 2.2rem;
+}
+
+.mt-200 {
+  margin-top: 200px;
+}

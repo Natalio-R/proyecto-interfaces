@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metatags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NiftyVerse - NFT Marketplace</title>
+    <!-- Frameworks CSS - Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Locals CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Iconos - Fontawesome -->
+    <link rel="stylesheet" href="https://kit.fontawesome.com/b7812e77e8.css" crossorigin="anonymous">
+    <!-- Icons - Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="overflow-hidden">
+        <!-- Headers -->
+        <header class="header__1" id="header">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="header__logo">
+                        <a href="../index.html">
+                            <img src="../assets/logo_black.png" alt="Logotipo" title="NiftyVerse">
+                        </a>
+                    </div>
+                    <div class="header__menu d-xl-flex d-sm-none">
+                        <ul class="d-flex space-x-20">
+                            <li>
+                                <a href="../index.html" class="color_black">Inicio</a>
+                            </li>
+                            <li>
+                                <a href="./marketplace.html" class="color_black active">Marketplace</a>
+                            </li>
+                            <li>
+                                <a href="./creators.html" class="color_black">Creadores</a>
+                            </li>
+                            <li>
+                                <a href="./contact.html" class="color_black">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-search-btns-div">
+                        <div class="header__search d-xl-flex d-sm-none">
+                            <input type="text" placeholder="Buscar">
+                            <a href="#">
+                                <button class="header__result">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="header__btns">
+                            <div class="container dark-mode-div">
+                                <div class="text-center d-flex justify-content-between space-x-10 align-items-center">
+                                    <div class="mode_switcher space-x-10">
+                                        <div class="light d-flex align-items-center mode">
+                                            <i class="bi bi-moon-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu__btn d-sm-flex d-xl-none" id="swicthMenu">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="header__mobile js-header-mobile" id="menuMobile">
+                            <div class="header__mobile__menu space-y-80">
+                                <ul class="d-flex space-y-30 container" style="padding: 0px;">
+                                    <li><a class="color_black" href="../index.html">Inicio</a></li>
+                                    <li><a class="color_black active" href="./marketplace.html">Marketplace</a></li>
+                                    <li><a class="color_black" href="./creators.html">Creadores</a> </li>
+                                    <li><a class="color_black" href="./contact.html">Contacto</a></li>
+                                    <li><a class="color_black" href="./connect_wallet.html">Conectar Wallet</a>
+                                    </li>
+                                </ul>
+                                <div class="headers-btns-div ">
+                                    <a class="btn header-btn header-btn-signup" href="./signup.html">Registrarse</a>
+                                    <a class="btn header-btn header-btn-signin" href="./signin.html">Iniciar
+                                        Sesión</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <div id="viewport">
+            <!-- Marketplace -->
+            <div class="container explore-page">
+                <div class="hero__collections my-display-flex-explore-filters">
+                    <div>
+                        <h1>Explorar <span class="explore-span">recientes
+                                <img class="arrow-down" src="../assets/arrow-down.svg"></span>
+                        </h1>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="section mt-50">
+                        <div class="row mb-50_reset">
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./nft_detail.html">
+                                                <img src="../assets/nft/nft_01.webp" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="#">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">24</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span>
+                                                        <i class="bi bi-bag-fill"></i>Comprar
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0001"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./creator_detail.html">
+                                                        <img src="../assets/avatars/av_01.jpg" alt="Imagen creador">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.89 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./nft_detail.html">
+                                                <img src="../assets/nft/nft_01.webp" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="#">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">24</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span>
+                                                        <i class="bi bi-bag-fill"></i>Comprar
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0001"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./creator_detail.html">
+                                                        <img src="../assets/avatars/av_01.jpg" alt="Imagen creador">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.89 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./nft_detail.html">
+                                                <img src="../assets/nft/nft_01.webp" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="#">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">24</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span>
+                                                        <i class="bi bi-bag-fill"></i>Comprar
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0001"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./creator_detail.html">
+                                                        <img src="../assets/avatars/av_01.jpg" alt="Imagen creador">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.89 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./nft_detail.html">
+                                                <img src="../assets/nft/nft_01.webp" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="#">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">24</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span>
+                                                        <i class="bi bi-bag-fill"></i>Comprar
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0001"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./creator_detail.html">
+                                                        <img src="../assets/avatars/av_01.jpg" alt="Imagen creador">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.89 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./nft_detail.html">
+                                                <img src="../assets/nft/nft_01.webp" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="#">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">24</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span>
+                                                        <i class="bi bi-bag-fill"></i>Comprar
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0001"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./creator_detail.html">
+                                                        <img src="../assets/avatars/av_01.jpg" alt="Imagen creador">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.89 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./nft_detail.html">
+                                                <img src="../assets/nft/nft_01.webp" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="#">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">24</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span>
+                                                        <i class="bi bi-bag-fill"></i>Comprar
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0001"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./creator_detail.html">
+                                                        <img src="../assets/avatars/av_01.jpg" alt="Imagen creador">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.89 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./nft_detail.html">
+                                                <img src="../assets/nft/nft_01.webp" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="#">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">24</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span>
+                                                        <i class="bi bi-bag-fill"></i>Comprar
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0001"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./creator_detail.html">
+                                                        <img src="../assets/avatars/av_01.jpg" alt="Imagen creador">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.89 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./nft_detail.html">
+                                                <img src="../assets/nft/nft_01.webp" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="#">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">24</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span>
+                                                        <i class="bi bi-bag-fill"></i>Comprar
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0001"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./creator_detail.html">
+                                                        <img src="../assets/avatars/av_01.jpg" alt="Imagen creador">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.89 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./nft_detail.html">
+                                                <img src="../assets/nft/nft_01.webp" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="#">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">24</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span>
+                                                        <i class="bi bi-bag-fill"></i>Comprar
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0001"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./creator_detail.html">
+                                                        <img src="../assets/avatars/av_01.jpg" alt="Imagen creador">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.89 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./nft_detail.html">
+                                                <img src="../assets/nft/nft_01.webp" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="#">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">24</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span>
+                                                        <i class="bi bi-bag-fill"></i>Comprar
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0001"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./creator_detail.html">
+                                                        <img src="../assets/avatars/av_01.jpg" alt="Imagen creador">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.89 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./nft_detail.html">
+                                                <img src="../assets/nft/nft_01.webp" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="#">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">24</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span>
+                                                        <i class="bi bi-bag-fill"></i>Comprar
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0001"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./creator_detail.html">
+                                                        <img src="../assets/avatars/av_01.jpg" alt="Imagen creador">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.89 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="slider-item my-cart-padding">
+                                    <div
+                                        class="sc-card-product back-blur back-glass-effect bg-color-dark bg-cart-dark-color not-blur-bg">
+                                        <div class="card-media active">
+                                            <a href="./nft_detail.html">
+                                                <img src="../assets/nft/nft_01.webp" alt="Imagen NFT">
+                                            </a>
+                                            <a class="likes space-x-3 back-blur back-glass-effect back-glass-darker"
+                                                href="#">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="txt_sm">24</span>
+                                            </a>
+                                            <div class="button-place-bid">
+                                                <a href="./nft_detail.html"
+                                                    class="sc-button style-place-bid style bag fl-button pri-3">
+                                                    <span>
+                                                        <i class="bi bi-bag-fill"></i>Comprar
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <h5 class="style2">
+                                                <a href="./pages/nft_detail.html">"Nombre NFT #0001"</a>
+                                            </h5>
+                                            <div class="tags">rct</div>
+                                        </div>
+                                        <div class="meta-info">
+                                            <div class="author">
+                                                <div class="avatar">
+                                                    <a href="./creator_detail.html">
+                                                        <img src="../assets/avatars/av_01.jpg" alt="Imagen creador">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <span>Creador</span>
+                                                    <h6><a href="./creator_detail.html">nombrecreador</a></h6>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span>Precio</span>
+                                                <h5>0.89 ETH</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer__1 ">
+                <div class="container">
+                    <div class="container">
+                        <div class="row container m-p-r-l-0-mobile">
+                            <div class="col-sm-12 col-lg-4 space-y-20">
+                                <div class="footer__logo d-sm-none d-md-block">
+                                    <a href="../index.html">
+                                        <img src="../assets/logo_black.png" class="footer-logo" alt="Logotipo Nifty"
+                                            id="logo_js_f">
+                                    </a>
+                                </div>
+                                <div class="send-email-div">
+                                    <input type="text" id="footer-send-email-input" placeholder="Tu correo"
+                                        style="border: none;">
+                                    <a href="#">Enviar</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-6 tablet-padding-left-zero">
+                                <h6 class="footer__title">Menu</h6>
+                                <ul class="footer__list">
+                                    <li><a href="./marketplace.html">Tienda</a></li>
+                                    <li><a href="./creators.html">Creadores</a></li>
+                                    <li><a href="../index.html">Inicio</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-6">
+                                <h6 class="footer__title">Creadores</h6>
+                                <ul class="footer__list">
+                                    <li><a href="./signin.html">Iniciar Sesión</a></li>
+                                    <li><a href="./signup.html">Registrarse</a></li>
+                                    <li><a href="./connect_wallet.html">Conectar Wallet</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 d-xl-block d-lg-none col-6">
+                                <h6 class="footer__title">Páginas</h6>
+                                <ul class="footer__list">
+                                    <li><a href="./contact.html">Contacto</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-2 col-lg-4 tablet-padding-left-zero padding-right-zero-social">
+                                <div>
+                                    <ul class="footer__social space-x-10">
+                                        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                        <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                                        <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                                        <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                                <hr>
+                                <div>
+                                    <div href="https://natalio.netlify.app" id="copyright-web" target="_blank"
+                                        class="copyright" style="margin-top: 105px;">Diseño &amp; Desarrollo <a
+                                            href="https://natalio.netlify.app" target="_blank"><img
+                                                src="https://natalio.netlify.app/favicon.ico" class="copyright-logo"
+                                                id="copyright-logo-f"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- Local JS -->
+    <script src="../js/switch.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

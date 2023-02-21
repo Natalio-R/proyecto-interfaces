@@ -1,0 +1,517 @@
+@mixin xs {
+  @media screen and (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (min-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin max-lg {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin absolute {
+  position: absolute;
+  @content;
+}
+
+@mixin before {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    @content;
+  }
+}
+
+@mixin before_center {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    @content;
+  }
+}
+
+@mixin after {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    @content;
+  }
+}
+
+@mixin overlay {
+  z-index: 0;
+  transition: 0.2s $transition_function;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.308);
+    @content;
+  }
+}
+
+@mixin flex_center() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin animate($property: all, $ease: $transition_function, $duration: 0.4s) {
+  -webkit-transition: $property $ease $duration;
+  -moz-transition: $property $ease $duration;
+  -o-transition: $property $ease $duration;
+  transition: $property $ease $duration;
+}
+
+@mixin animate_with_delay(
+  $property: all,
+  $ease: $transition_function,
+  $duration: 0.4s,
+  $delay: 2s
+) {
+  -webkit-transition: $property $ease $duration $delay;
+  -moz-transition: $property $ease $duration $delay;
+  -o-transition: $property $ease $duration $delay;
+  transition: $property $ease $duration $delay;
+}
+
+@mixin divider() {
+  content: "•";
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.8em;
+  margin-top: -2px;
+  color: $color_brand;
+}
+
+@mixin link_reset() {
+  &:before {
+    display: none;
+  }
+}
+
+@mixin fade_up() {
+  transform: translateY(10px);
+  opacity: 0;
+  visibility: hidden;
+  @include animate();
+}
+
+@mixin fade_up_active() {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+@mixin fade_down() {
+  transform: translateY(-10px);
+  opacity: 0;
+  visibility: hidden;
+  @include animate();
+}
+
+@mixin fade_down_active() {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+@mixin flip_up() {
+  opacity: 0;
+  visibility: hidden;
+  @include animate();
+  transform-origin: 50% -50px;
+  transform: perspective(300px) rotateX(-15deg);
+}
+
+@mixin flip_up_active() {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+@mixin active_image() {
+  transform: scale(0.98);
+  @include animate();
+}
+
+@mixin btn_shadow() {
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+@mixin btn_shadow_inset() {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.04);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.04);
+}
+
+@mixin shape_shadow() {
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
+}
+
+@mixin dropdown_shadow() {
+  -webkit-box-shadow: 0 20px 32px -8px rgba(0, 0, 0, 0.15),
+    0 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 20px 32px -8px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin border_radius($radius: 4px) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin border_top_radius($radius: 4px) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+@mixin border_right_radius($radius: 4px) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin border_bottom_radius($radius: 4px) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin border_left_radius($radius: 4px) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+@mixin hr_screen {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin sm_screen {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin md_screen {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin tablet_vert_screen {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin tablet_screen {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin lg_screen {
+  @media screen and (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin xl_screen {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin note_screen {
+  @media screen and (min-width: 1025px) and (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin fluid-type(
+  $min-font-size: 28px,
+  $max-font-size: 72px,
+  $lower-range: 576px,
+  $upper-range: 1600px
+) {
+  font-size: calc(
+    #{$min-font-size} + #{(
+        ($max-font-size / ($max-font-size * 0 + 1)) -
+          ($min-font-size / ($min-font-size * 0 + 1))
+      )} * ((100vw - #{$lower-range}) / #{(
+            ($upper-range / ($upper-range * 0 + 1)) -
+              ($lower-range / ($lower-range * 0 + 1))
+          )})
+  );
+
+  @media screen and (max-width: $lower-range) {
+    font-size: $min-font-size;
+  }
+
+  @media screen and (min-width: $upper-range) {
+    font-size: $max-font-size;
+  }
+}
+
+@mixin spacer100($property: padding) {
+  #{$property}: 100px;
+
+  @include note_screen() {
+    #{$property}: $spacer_80;
+  }
+
+  @include tablet_screen() {
+    #{$property}: $spacer_70;
+  }
+  @include sm_screen() {
+    #{$property}: $spacer_50;
+  }
+}
+
+@mixin spacer90($property: padding) {
+  #{$property}: $spacer_90;
+
+  @include note_screen() {
+    #{$property}: $spacer_80;
+  }
+
+  @include tablet_screen() {
+    #{$property}: $spacer_40;
+  }
+}
+
+@mixin spacer80($property: padding) {
+  #{$property}: $spacer_80;
+
+  @include note_screen() {
+    #{$property}: $spacer_60;
+  }
+
+  @include tablet_screen() {
+    #{$property}: $spacer_40;
+  }
+}
+
+@mixin spacer70($property: padding) {
+  #{$property}: $spacer_70;
+
+  @include note_screen() {
+    #{$property}: $spacer_60;
+  }
+
+  @include tablet_screen() {
+    #{$property}: $spacer_40;
+  }
+}
+
+@mixin spacer60($property: padding) {
+  #{$property}: $spacer_60;
+
+  @include note_screen() {
+    #{$property}: $spacer_50;
+  }
+
+  @include tablet_screen() {
+    #{$property}: $spacer_40;
+  }
+
+  @include sm_screen() {
+    #{$property}: $spacer_30;
+  }
+}
+
+@mixin spacer50($property: padding) {
+  #{$property}: $spacer_50;
+
+  @include note_screen() {
+    #{$property}: $spacer_40;
+  }
+
+  @include tablet_screen() {
+    #{$property}: $spacer_30;
+  }
+
+  @include sm_screen() {
+    #{$property}: $spacer_20;
+  }
+}
+
+@mixin spacer40($property: padding) {
+  #{$property}: $spacer_40;
+
+  @include note_screen() {
+    #{$property}: $spacer_30;
+  }
+
+  @include tablet_screen() {
+    #{$property}: $spacer_30;
+  }
+
+  @include sm_screen() {
+    #{$property}: $spacer_20;
+  }
+}
+
+@mixin spacer30($property: padding) {
+  #{$property}: $spacer_30;
+
+  @include note_screen() {
+    #{$property}: $spacer_25;
+  }
+
+  @include tablet_screen() {
+    #{$property}: $spacer_25;
+  }
+
+  @include sm_screen() {
+    #{$property}: $spacer_20;
+  }
+}
+
+@mixin spacer25($property: padding) {
+  #{$property}: $spacer_25;
+
+  @include sm_screen() {
+    #{$property}: $spacer_20;
+  }
+}
+
+@mixin spacer20($property: padding) {
+  #{$property}: $spacer_20;
+}
+
+@mixin crop_string() {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin maxMobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin maxSmall {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin minSmall {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin minMedium {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin minLarge {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin keyFrame($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin card_item {
+  background: $color_white;
+  border: solid 1px $color_stroke;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: $shadow_1;
+  @content;
+}
+
+@mixin hero {
+  background: $color_white;
+  padding: 100px 0;
+  border-bottom: 1px solid $color_stroke;
+  @include tablet_vert_screen {
+    padding: 50px 0;
+  }
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

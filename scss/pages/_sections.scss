@@ -1,0 +1,702 @@
+.todaysPick-margin-top {
+  margin-top: 122px;
+}
+
+.section__head,
+#todaysPick .section__title,
+.hero__collections h1 {
+  font-size: 47px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding-top: 20px;
+  color: #000;
+}
+
+.explore-span,
+.todaysPick .explore-span {
+  color: #39f !important;
+  cursor: pointer;
+  text-transform: capitalize;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.explore-span .arrow-down,
+.todaysPick .explore-span .arrow-down {
+  height: 20px;
+  margin-left: 15px;
+}
+
+#todaysPick .info h6,
+#todaysPick .price h5,
+.sc-card-product .info h6,
+.sc-card-product .price h5 {
+  font-size: 15px;
+}
+
+.sc-card-product .meta-info .price h5 {
+  color: #39f !important;
+}
+
+.sc-card-product .info h6 a {
+  color: #b8bbbf;
+  font-weight: 600;
+}
+
+.info h6 a {
+  color: #000 !important;
+  font-weight: 600 !important;
+}
+
+.section__title {
+  margin: 0;
+}
+
+.section__title {
+  font-size: 34px;
+
+  @include tablet_vert_screen {
+    font-size: 32px;
+  }
+
+  @include sm {
+    font-size: 30px;
+  }
+}
+
+.section__head {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logos__wrap {
+  margin-top: 100px;
+  @include card_item;
+  padding: 80px 60px;
+
+  img {
+    height: fit-content;
+  }
+
+  @include tablet_vert_screen {
+    margin-top: 50px;
+    padding: 50px 15px;
+  }
+}
+
+.call2action {
+  background: radial-gradient(
+    100.04% 100.76% at 50.49% -0.76%,
+    #29436d 0%,
+    #050911 100%
+  );
+  padding: 100px 0;
+  margin-top: 100px;
+
+  @include md {
+    text-align: center;
+
+    .section__text {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  .section__text {
+    max-width: 30rem;
+    margin-left: 0;
+    @include md {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @include tablet_vert_screen {
+    margin-top: 50px;
+  }
+}
+
+.community {
+  margin-top: 100px;
+
+  @include tablet_vert_screen {
+    margin-top: 50px;
+  }
+  .section__title {
+    max-width: 60rem;
+    font-size: 45px;
+    font-weight: 600;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section__text {
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .community__items {
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      border: none !important;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      @include card_item;
+      @include tablet_vert_screen {
+        margin-bottom: 20px;
+      }
+      padding: 50px 30px;
+      .logo {
+        height: 5rem;
+        width: 5rem;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #edf3f5;
+
+        &.is_twitter {
+          background: rgba(5, 171, 246, 0.1);
+        }
+        &.is_discord {
+          background: rgba(114, 137, 217, 0.1);
+        }
+      }
+    }
+  }
+}
+.community .community__items .item:hover {
+  transform: translateY(-0.8rem);
+}
+.fixed_row {
+  padding: 20px 0;
+  background-color: $color_white;
+  position: fixed;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 2;
+  border-top: 1px solid $color_stroke;
+  .content {
+    @media screen and (max-width: 404px) {
+      justify-content: center !important;
+    }
+  }
+}
+
+.section__artists {
+  position: relative;
+  .container {
+    position: relative;
+  }
+  .swiper-button-prev {
+    height: 3rem;
+    width: 3rem;
+    top: 20px;
+    left: auto;
+    right: 5rem !important;
+    background: $color_white;
+    border: solid 1px $color_stroke;
+    box-shadow: $shadow_2;
+    transition: all 0.2s ease-in-out 0s;
+    border-radius: 100px;
+    &:hover {
+      background: white;
+      box-shadow: none;
+    }
+    &::after {
+      color: $color_black;
+      font-size: 15px;
+      font-weight: 700;
+      transition: all 0.2s ease-in-out 0s;
+    }
+  }
+  .swiper-button-next {
+    height: 3rem;
+    width: 3rem;
+    top: 20px;
+    right: 15px !important;
+    background: $color_white;
+    border: solid 1px $color_stroke;
+    box-shadow: $shadow_2;
+    transition: all 0.2s ease-in-out 0s;
+    border-radius: 100px;
+    &:hover {
+      background: $color_stroke;
+      box-shadow: none;
+    }
+    &::after {
+      color: $color_black;
+      font-size: 15px;
+      font-weight: 700;
+      transition: all 0.2s ease-in-out 0s;
+    }
+  }
+}
+.section__activity {
+  .box {
+    .row {
+      @include sm {
+        justify-content: center !important;
+      }
+      .creators_box {
+        @include sm {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.market-data-page .market-div {
+  align-items: center;
+  display: flex;
+  height: 100%;
+
+  .market-data-div {
+    max-width: 50%;
+    text-align: center;
+    width: 100%;
+
+    .section__title {
+      font-size: 47px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      line-height: 70px;
+      color: #000;
+    }
+  }
+
+  .connect-wallet-btn-div {
+    margin-top: 5%;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.item_details_page {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+
+  .item_details {
+    margin-top: 26px;
+    width: 100%;
+
+    .likes {
+      position: unset;
+    }
+
+    .my-col-lg-5 {
+      max-height: 82vh !important;
+      width: 41% !important;
+
+      .item_img {
+        border-radius: 40px !important;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    .my-col-lg-7 {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      width: 55% !important;
+    }
+
+    .right-side-div {
+      display: flex;
+      justify-content: space-between;
+
+      .nft-info-left {
+        background-color: $color_white;
+        border-radius: 40px;
+        padding: 5%;
+        position: relative;
+        width: 58%;
+
+        .info-inner-div {
+          height: 100%;
+          position: relative;
+        }
+
+        .likes {
+          background: #fff !important;
+          box-shadow: 0 0 15px rgb(0 0 0/5%) !important;
+          color: #1a1a1a;
+
+          i {
+            color: #1a1a1a !important;
+            font-size: 22px;
+            font-weight: 500;
+            margin-right: 5px;
+            position: relative;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+          }
+        }
+
+        .nft-name {
+          font-size: 42px;
+          font-weight: 500;
+          letter-spacing: 0;
+          line-height: 64px;
+          margin-top: 18px;
+          color: #000;
+        }
+
+        .nft-dis {
+          color: #b8bbbf;
+          font-size: 12px;
+          font-weight: 500;
+          margin-top: 35px;
+        }
+
+        .info-btns-div {
+          align-items: center;
+          bottom: 0;
+          flex-direction: column;
+          position: absolute;
+          width: 100%;
+
+          a {
+            margin: 0 !important;
+          }
+
+          .info-buy-btn {
+            background-color: #39f !important;
+            color: $color_white;
+            font-weight: 500;
+            padding: 15px 25px;
+          }
+
+          .info-place-bid-btn {
+            background: #cce6ff !important;
+            box-shadow: none !important;
+            color: #39f !important;
+            font-weight: 500;
+            padding: 15px 25px;
+            margin-top: 15px !important;
+          }
+        }
+      }
+
+      .right-bids-div {
+        background-color: $color_white;
+        border-radius: 40px;
+        padding: 5% 6%;
+        width: 40%;
+
+        .creator_item .avatars {
+          .details-name span {
+            font-size: 12px;
+          }
+
+          .biders-price {
+            font-size: 15px;
+            font-weight: 700;
+            margin-top: 10px !important;
+            color: #1a1a1a;
+          }
+        }
+      }
+    }
+
+    .more {
+      margin-left: 22px !important;
+    }
+
+    .numbers {
+      margin-top: 22px;
+
+      p {
+        color: #87898c;
+        font-weight: 500;
+        text-transform: capitalize;
+        font-size: 12px;
+      }
+
+      h4 {
+        font-weight: 600 !important;
+        color: #1a1a1a !important;
+      }
+    }
+  }
+
+  .tabs-div {
+    background-color: #f5f6f7;
+    border-radius: 100px;
+    position: relative;
+
+    .nav-tabs {
+      border: none !important;
+    }
+
+    .nav.nav-tabs .nav-item {
+      .btn-two {
+        margin: 0;
+        position: absolute;
+        right: 0;
+      }
+
+      a {
+        padding: 14px 27px;
+      }
+    }
+  }
+
+  .tab-content {
+    height: 400px;
+    margin-top: 44px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    & > .active {
+      display: block;
+    }
+  }
+
+  .creator_card {
+    background-color: transparent !important;
+    border: none;
+    box-shadow: none;
+    padding: 0 !important;
+
+    .avatars {
+      .avatar.avatar-md {
+        height: 3.5rem;
+        width: 3.5rem;
+      }
+    }
+  }
+}
+
+.share {
+  position: relative;
+
+  .icon {
+    align-items: center;
+    background: $color_white;
+    border: 1px solid #e2eef1;
+    border-radius: 2000px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+    cursor: pointer;
+    display: flex;
+    height: 3rem;
+    justify-content: center;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 3rem;
+
+    &:hover {
+      background-color: #e2eef1;
+    }
+
+    i {
+      font-size: 19px;
+      color: #183b56;
+    }
+  }
+
+  .dropdown__popup {
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 60px;
+    -webkit-transform: translateX(-50%) translateY(-1rem);
+    transform: translateX(-50%) translateY(-1rem);
+    visibility: hidden;
+
+    a {
+      color: #183b56;
+      display: block;
+    }
+  }
+}
+
+.more {
+  position: relative;
+  z-index: 1;
+
+  .icon {
+    align-items: center;
+    background: $color_white;
+    border: 1px solid #e2eef1;
+    border-radius: 2000px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+    cursor: pointer;
+    display: flex;
+    height: 3rem;
+    justify-content: center;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 3rem;
+
+    &:hover {
+      background-color: #e2eef1;
+    }
+
+    i {
+      font-size: 25px !important;
+      color: #183b56;
+    }
+  }
+}
+
+.creator-page .more .icon,
+.creator-page .share .icon,
+.item_details_page .more .icon,
+.item_details_page .share .icon {
+  border: none;
+  box-shadow: 0 0 15px rgb(0 0 0/5%) !important;
+}
+
+.dropdown__popup,
+.share .share_box {
+  background: #fff;
+  border: 1px solid #e2eef1;
+  border-radius: 30px;
+  box-shadow: 0 17px 13px 0 #192c4b05;
+  padding: 20px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 99;
+
+  i {
+    font-size: 20px;
+  }
+
+  a {
+    color: #183b56;
+    display: block;
+  }
+}
+
+.nav-tabs .nav-item a {
+  color: #1a1a1a !important;
+}
+
+.nav-tabs .nav-item a.active,
+.nav-tabs .nav-item a.active:focus,
+.nav-tabs .nav-item a.active:hover {
+  background: #000 !important;
+  border: 1px solid #183b56;
+  color: $color_white !important;
+}
+
+ul.nav-tabs .nav-item a.active {
+  background: $color_white !important;
+  background-color: $color_white !important;
+  border: none !important;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.07) !important;
+  color: #1a1a1a !important;
+}
+
+.collections {
+  @include sm_screen {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .collections_item {
+    @include card_item;
+
+    .top_imgs {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        width: 31%;
+        object-fit: cover;
+      }
+    }
+
+    .images-box {
+      border-radius: $border_radius/2;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      box-shadow: $shadow_1;
+      transition: all 0.35s ease-in-out;
+    }
+  }
+
+  .collections_footer {
+    .collection_title {
+      a {
+        color: $color_black;
+        font-size: 20px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+
+        &:hover {
+          color: $color_brand;
+        }
+      }
+    }
+  }
+
+  .creators,
+  .collections_footer,
+  .likes {
+    display: flex;
+    align-items: center;
+  }
+  .likes {
+    color: $color_black;
+
+    i {
+      transition: all 0.25s $transition_function;
+      color: rgb(184, 189, 209);
+
+      @include after {
+        height: 1.5rem;
+        width: 1.5rem;
+        left: 45%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        border-radius: 100%;
+        transition: all 0.25s $transition_function;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+        color: $color_red;
+
+        @include after {
+          transform: translate(-50%, -50%) scale(1.5);
+        }
+      }
+    }
+  }
+
+  &.is__gaming {
+    .images-box {
+      border-radius: 0;
+
+      img {
+        border-radius: 20px;
+        width: 100%;
+      }
+
+      .big_img {
+        object-fit: cover;
+        width: 800%;
+        max-height: 368px;
+      }
+
+      .left_imgs {
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.btn-width-full {
+  width: 100% !important;
+}
